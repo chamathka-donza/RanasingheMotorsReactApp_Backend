@@ -22,6 +22,14 @@ const userSchema = new mongoose.Schema({
     supplier_add: { type: Boolean, default: false },
     supplier_update: { type: Boolean, default: false },
     supplier_delete: { type: Boolean, default: false },
+    import_view: { type: Boolean, default: false },
+    import_add: { type: Boolean, default: false },
+    import_update: { type: Boolean, default: false },
+    import_delete: { type: Boolean, default: false },
+    importSupplier_view: { type: Boolean, default: false },
+    importSupplier_add: { type: Boolean, default: false },
+    importSupplier_update: { type: Boolean, default: false },
+    importSupplier_delete: { type: Boolean, default: false },
   }
 }, { timestamps: true });
 

@@ -17,6 +17,8 @@ const productRoutes = require('./routes/products');
 const metadataRoutes = require('./routes/metadata');
 const settingsRoutes = require('./routes/settings');
 const uploadRoutes = require('./routes/upload');
+const importSupplierRoutes = require('./routes/importSuppliers');
+const importRoutes = require('./routes/imports');
 const path = require('path');
 
 dotenv.config();
@@ -37,6 +39,8 @@ app.use('/api/products', productRoutes);
 app.use('/api/metadata', metadataRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/upload', uploadRoutes);
+app.use('/api/importSuppliers', importSupplierRoutes);
+app.use('/api/imports', importRoutes);
 
 const __dirname_path = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname_path, '/uploads')));
