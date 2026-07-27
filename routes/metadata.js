@@ -49,7 +49,7 @@ const createMetadataRoutes = (Model, path) => {
   const entity = path.slice(0, -1);
 
   router.get(`/${path}`, protect, hasPermission(`${entity}_view`), async (req, res) => {
-    const items = await Model.find({});
+    const items = await Model.find({}).sort({ name: 1 });
     res.json(items);
   });
 
